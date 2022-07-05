@@ -14,8 +14,7 @@ categories: python
 ## pyinstaller打包之后的windows程序无法正常运行多进程
 
 ### 错误日志
-<!-- ![pyinstaller_err](/source/imgs/pyinstaller_err.png)  -->
-![pyinstaller_err](./pyinstaller打包之后的windows程序无法正常运行多进程/pyinstaller_err.png)
+![](./pyinstaller打包之后的windows程序无法正常运行多进程/pyinstaller_err.png)
 
 ### 解决方案
 在 if __name__ == '__main__':的方法下面添加 multiprocessing.freeze_support()
