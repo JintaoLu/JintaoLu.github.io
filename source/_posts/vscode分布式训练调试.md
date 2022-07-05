@@ -1,8 +1,21 @@
 ---
 title: vscode分布式训练调试
+catalog: true
 date: 2022-06-29 16:47:53
-tags:
+tags: [vscode, 分布式训练, 调试]
+categories: 深度学习
 ---
+
+<!-- 
+title: 文章标题
+catalog: 是否显示段落目录
+date: 文章日期
+subtitle: 子标题
+header-img: 顶部背景图片
+top: 是否置顶
+tags: 标签
+categories: 分类 
+-->
 
 ## 解决torch.distributed训练时需要Debug问题
 ### 正常运行命令
