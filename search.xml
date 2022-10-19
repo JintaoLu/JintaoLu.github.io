@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Git报错:Failed to connect to github.com port 443 after 2123 ms: Connection refused</title>
+      <link href="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/"/>
+      <url>/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Git报错-Failed-to-connect-to-github-com-port-443-after-2123-ms-Connection"><a href="#Git报错-Failed-to-connect-to-github-com-port-443-after-2123-ms-Connection" class="headerlink" title="Git报错:Failed to connect to github.com port 443 after 2123 ms: Connection"></a>Git报错:Failed to connect to github.com port 443 after 2123 ms: Connection</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/error.png"></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>登录网站：<a href="https://www.ipaddress.com/">https://www.ipaddress.com</a></p></li><li><p>在打开的网站中将“github.com”复制到查询栏中进行搜索，可以看到域名对应的IP地址信息<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/github_ip.png"></p></li><li><p>进入 C:\Windows\System32\drivers\etc 将搜索结果中展示的Ip地址和域名拷贝系统hosts文件中,没有的话，则创建一个hosts文件：<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/hosts.png"></p></li><li><p>如若遇到 “ OpenSSL SSL_read: Connection was reset, errno 10054” 问题，则解除验证后再次Git:<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/error10054.png"><br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/success.png"></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/10/19/hello-world/"/>
+      <url>/2022/10/19/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>pyinstaller打包之后的windows程序无法正常运行多进程</title>
+      <link href="/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/"/>
+      <url>/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="pyinstaller打包之后的windows程序无法正常运行多进程"><a href="#pyinstaller打包之后的windows程序无法正常运行多进程" class="headerlink" title="pyinstaller打包之后的windows程序无法正常运行多进程"></a>pyinstaller打包之后的windows程序无法正常运行多进程</h2><h3 id="错误日志"><a href="#错误日志" class="headerlink" title="错误日志"></a>错误日志</h3><p><img src="/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/pyinstaller_err.png"></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>在 if <strong>name</strong> == ‘<strong>main</strong>‘:的方法下面添加 multiprocessing.freeze_support()</p><pre class="line-numbers language-none"><code class="language-none">from multiprocessing import freeze_supportif __name__ == '__main__':    freeze_support()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pyinstaller </tag>
+            
+            <tag> 多进程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vscode分布式训练调试</title>
+      <link href="/2022/06/29/vscode-fen-bu-shi-xun-lian-diao-shi/"/>
+      <url>/2022/06/29/vscode-fen-bu-shi-xun-lian-diao-shi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="解决torch-distributed训练时需要Debug问题"><a href="#解决torch-distributed训练时需要Debug问题" class="headerlink" title="解决torch.distributed训练时需要Debug问题"></a>解决torch.distributed训练时需要Debug问题</h2><h3 id="正常运行命令"><a href="#正常运行命令" class="headerlink" title="正常运行命令"></a>正常运行命令</h3><pre class="line-numbers language-none"><code class="language-none">CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node 1  main.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="VSCODE调试"><a href="#VSCODE调试" class="headerlink" title="VSCODE调试"></a>VSCODE调试</h3><p>在VS Code中想要调试Python脚本很简单，只需要创建一个launch.json文件即可。</p><pre class="line-numbers language-none"><code class="language-none">{    // 使用 IntelliSense 了解相关属性。     // 悬停以查看现有属性的描述。    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387    "version": "0.2.0",    "configurations": [        {            "name": "Python: Current File",            "type": "python",            "request": "launch",            "program": "xxx/lib/python3.6/site-packages/torch/distributed/launch.py",            "console": "integratedTerminal",            "justMyCode": true,            "cwd": "${workspaceFolder}/xxx/xxx",            "args": [                "--nproc_per_node","1",                "main.py"            ],            "env": {"CUDA_VISIBLE_DEVICES":"0"}        }    ]}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vscode </tag>
+            
+            <tag> 分布式训练 </tag>
+            
+            <tag> 调试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
