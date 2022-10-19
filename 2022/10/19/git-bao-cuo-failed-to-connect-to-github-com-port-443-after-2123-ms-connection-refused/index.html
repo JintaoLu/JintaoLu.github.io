@@ -493,7 +493,11 @@
 </li>
 <li><p>进入 C:\Windows\System32\drivers\etc 将搜索结果中展示的Ip地址和域名拷贝系统hosts文件中,没有的话，则创建一个hosts文件：<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/hosts.png"></p>
 </li>
-<li><p>如若遇到 “ OpenSSL SSL_read: Connection was reset, errno 10054” 问题，则解除验证后再次Git:<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/error10054.png"><br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/success.png"></p>
+<li><p>如若遇到 “ OpenSSL SSL_read: Connection was reset, errno 10054” 问题，则解除验证：</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">git config --global http.sslVerify "false"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/error10054.png"></p>
+</li>
+<li><p>再次Git代码:<br><img src="/2022/10/19/git-bao-cuo-failed-to-connect-to-github-com-port-443-after-2123-ms-connection-refused/success.png"></p>
 </li>
 </ol>
 
@@ -1010,7 +1014,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">381</span>
+                        class="white-color">388</span>
             
             
             
