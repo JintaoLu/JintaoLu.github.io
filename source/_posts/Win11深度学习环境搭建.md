@@ -36,7 +36,7 @@ nvidia官网下载对应版本：https://developer.nvidia.cn/cuda-toolkit-archiv
 找到对应版本（11.3.0）的安装包并下载(需要注册账号)：
 ![](./Win11深度学习环境搭建/cudnn.png)
 
-## PyTorch安装
+## 四、PyTorch安装
 先安装anaconda（省略安装过程），安装命令：
 ```angular2html
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
