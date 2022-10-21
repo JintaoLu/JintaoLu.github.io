@@ -4,10 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="pyinstaller打包之后的windows程序无法正常运行多进程, DeepLearning Jinato 深度学习 计算机视觉 图像处理">
-    <meta name="description" content="pyinstaller打包之后的windows程序无法正常运行多进程错误日志
-解决方案在 if name == ‘main‘:的方法下面添加 multiprocessing.freeze_support()
-from multiproces">
+    <meta name="keywords" content="Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建, DeepLearning Jinato 深度学习 计算机视觉 图像处理">
+    <meta name="description" content="Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建一、安装WSL2
+开启Windows功能： 系统设置 -&amp;gt; 应用 -&amp;gt; 可选功能 -&amp;gt; 最下边的 「更多 Windows 功能」 -&amp;g">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@ from multiproces">
 
     
 
-    <title>pyinstaller打包之后的windows程序无法正常运行多进程 | Jinato的博客</title>
+    <title>Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建 | Jinato的博客</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -313,12 +312,12 @@ from multiproces">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">pyinstaller打包之后的windows程序无法正常运行多进程</h1>
+                    <h1 class="description center-align post-title">Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建</h1>
                 </div>
             </div>
         </div>
@@ -434,16 +433,28 @@ from multiproces">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/Win11/">
+                                <span class="chip bg-color">Win11</span>
                             </a>
                         
-                            <a href="/tags/pyinstaller/">
-                                <span class="chip bg-color">pyinstaller</span>
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">深度学习</span>
                             </a>
                         
-                            <a href="/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
-                                <span class="chip bg-color">多进程</span>
+                            <a href="/tags/WSL2/">
+                                <span class="chip bg-color">WSL2</span>
+                            </a>
+                        
+                            <a href="/tags/Ubuntu20-04/">
+                                <span class="chip bg-color">Ubuntu20.04</span>
+                            </a>
+                        
+                            <a href="/tags/CUDA/">
+                                <span class="chip bg-color">CUDA</span>
+                            </a>
+                        
+                            <a href="/tags/PYTORCH/">
+                                <span class="chip bg-color">PYTORCH</span>
                             </a>
                         
                     </div>
@@ -454,8 +465,8 @@ from multiproces">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python/" class="post-category">
-                                python
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
                             </a>
                         
                     </div>
@@ -467,7 +478,7 @@ from multiproces">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-05
+                    2022-10-20
                 </div>
                 
 
@@ -491,11 +502,124 @@ from multiproces">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="pyinstaller打包之后的windows程序无法正常运行多进程"><a href="#pyinstaller打包之后的windows程序无法正常运行多进程" class="headerlink" title="pyinstaller打包之后的windows程序无法正常运行多进程"></a>pyinstaller打包之后的windows程序无法正常运行多进程</h2><h3 id="错误日志"><a href="#错误日志" class="headerlink" title="错误日志"></a>错误日志</h3><p><img src="/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/pyinstaller_err.png"></p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>在 if <strong>name</strong> == ‘<strong>main</strong>‘:的方法下面添加 multiprocessing.freeze_support()</p>
-<pre class="line-numbers language-none"><code class="language-none">from multiprocessing import freeze_support
-if __name__ == '__main__':
-    freeze_support()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="Win11-WSL2-Ubuntu20-04-CUDA-PYTORCH深度学习环境搭建"><a href="#Win11-WSL2-Ubuntu20-04-CUDA-PYTORCH深度学习环境搭建" class="headerlink" title="Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建"></a>Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建</h1><h2 id="一、安装WSL2"><a href="#一、安装WSL2" class="headerlink" title="一、安装WSL2"></a>一、安装WSL2</h2><ol>
+<li><p>开启Windows功能： 系统设置 -&gt; 应用 -&gt; 可选功能 -&gt; 最下边的 「更多 Windows 功能」 -&gt; 找到并勾选 「Hyper-V」和「适用于 Linux 的 Windows 子系统」-&gt; 点击确定<br><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/setting1.png"><br><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/setting2.png"><br>WRAN: 重启电脑</p>
+</li>
+<li><p>配置和安装wsl2和ubuntu</p>
+</li>
+</ol>
+<p>官网文档：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/ai/directml/gpu-cuda-in-wsl">https://learn.microsoft.com/en-us/windows/ai/directml/gpu-cuda-in-wsl</a></p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html"># Wran: 以管理员身份运行terminal
+# 安装wsl
+wsl --install
+# 设置版本为wsl2
+wsl --set-default-version 2
+# 更新wsl
+wsl --update
+# 查看可安装的Linux版本
+wsl --list online
+# 安装Ubuntu20.04
+wsl --install -d Ubuntu-20.04<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/wsl_install.png"><br><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/wsl_list_v.png"></p>
+<ol start="3">
+<li>换源</li>
+</ol>
+<p>打开sources.list文件</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo chmod 777 /etc/apt/sources.list
+sudo vim /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在vim的命令模式下按d,可以删除内容</p>
+<p>按 i 变成编辑模式，把下面内容复制粘贴进去</p>
+<p>先按ESC退回到命令模式，按 :wq 进行保存</p>
+<pre class="line-numbers language-none"><code class="language-none"># 阿里源
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+# 清华源
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>更新包：</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo apt update
+sudo apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="二、安装cuda-toolkit"><a href="#二、安装cuda-toolkit" class="headerlink" title="二、安装cuda toolkit"></a>二、安装cuda toolkit</h2><p>显卡安装，参考：<a href="https://jintaolu.github.io/2022/10/20/win11-shen-du-xue-xi-huan-jing-da-jian/">Win11深度学习环境搭建</a></p>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/nvidia-smi.png"></p>
+<p>安装cuda toolkit，进入 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a> ，这里是需要登录的，请读者自行注册。按下图选择版本：<br><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/cuda_toolkit_wsl.png"></p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda_11.3.0_465.19.01_linux.run
+sudo sh cuda_11.3.0_465.19.01_linux.run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/run_cuda_toolkit.png"></p>
+<p>安装完成后，在~/.bashrc中加入环境变量：</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">vim ~/.bashrc
+
+export PATH=/usr/local/cuda-11.3/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64:$LD_LIBRARY_PATH
+
+source ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>验证是否安装成功</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">nvcc -V<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/nvcc-V.png"></p>
+<h2 id="三、安装cuDNN"><a href="#三、安装cuDNN" class="headerlink" title="三、安装cuDNN"></a>三、安装cuDNN</h2><p>官网： <a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh">https://developer.nvidia.com/zh</a><br><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/cudnn_linux.png"></p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo tar -xvf cudnn-linux-x86_64-8.6.0.163_cuda11-archive.tar.xz
+sudo cp cudnn-linux-x86_64-8.6.0.163_cuda11-archive/lib/libcudnn* /usr/local/cuda-11.3/lib64/
+sudo cp cudnn-linux-x86_64-8.6.0.163_cuda11-archive/include/cudnn.h /usr/local/cuda-11.3/include/
+sudo cp cudnn-linux-x86_64-8.6.0.163_cuda11-archive/include/cudnn_version.h /usr/local/cuda-11.3/include/ 
+sudo chmod a+r /usr/local/cuda-11.3/include/cudnn.h 
+sudo chmod a+r /usr/local/cuda-11.3/lib64/libcudnn*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/cudnn.png"></p>
+<h2 id="四、安装Miniconda"><a href="#四、安装Miniconda" class="headerlink" title="四、安装Miniconda"></a>四、安装Miniconda</h2><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html"># 下载miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# 修改运行权限
+chmod 777 Miniconda3-latest-Linux-x86_64.sh
+# 运行安装脚本
+./Miniconda3-latest-Linux-x86_64.sh
+一直按回车，在需要输入yes的时候输入yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>添加变量到bashrc中</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">vim ~/.bashrc
+export PATH=/home/你的用户名/miniconda3/bin:$PATH
+source ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>conda换源</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+
+conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>pip换源</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="五、安装torch"><a href="#五、安装torch" class="headerlink" title="五、安装torch"></a>五、安装torch</h2><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+或
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>验证是否能使用GPU</p>
+<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">import torch
+torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/torch_cuda_is_available.png"></p>
+<p><strong>如果输出显示为False，则尝试重启Ubuntu，再试一试</strong></p>
+<p><strong>参考：</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/436393852">https://zhuanlan.zhihu.com/p/436393852</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e8401bbce562">https://www.jianshu.com/p/e8401bbce562</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Rayone_/article/details/124410685">https://blog.csdn.net/Rayone_/article/details/124410685</a></li>
+</ol>
 
                 
             </div>
@@ -522,7 +646,7 @@ if __name__ == '__main__':
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintaolu.github.io/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/">https://jintaolu.github.io/2022/07/05/pyinstaller-da-bao-zhi-hou-de-windows-cheng-xu-wu-fa-zheng-chang-yun-xing-duo-jin-cheng/</a>
+                    <a href="https://jintaolu.github.io/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/">https://jintaolu.github.io/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -560,16 +684,28 @@ if __name__ == '__main__':
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/Win11/">
+                                    <span class="chip bg-color">Win11</span>
                                 </a>
                             
-                                <a href="/tags/pyinstaller/">
-                                    <span class="chip bg-color">pyinstaller</span>
+                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">深度学习</span>
                                 </a>
                             
-                                <a href="/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
-                                    <span class="chip bg-color">多进程</span>
+                                <a href="/tags/WSL2/">
+                                    <span class="chip bg-color">WSL2</span>
+                                </a>
+                            
+                                <a href="/tags/Ubuntu20-04/">
+                                    <span class="chip bg-color">Ubuntu20.04</span>
+                                </a>
+                            
+                                <a href="/tags/CUDA/">
+                                    <span class="chip bg-color">CUDA</span>
+                                </a>
+                            
+                                <a href="/tags/PYTORCH/">
+                                    <span class="chip bg-color">PYTORCH</span>
                                 </a>
                             
                         </div>
@@ -743,17 +879,18 @@ if __name__ == '__main__':
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/10/19/hello-world/">
+                <a href="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -763,16 +900,49 @@ if __name__ == '__main__':
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-20
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Jinato
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Win11/">
+                        <span class="chip bg-color">Win11</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/WSL2/">
+                        <span class="chip bg-color">WSL2</span>
+                    </a>
+                    
+                    <a href="/tags/Ubuntu20-04/">
+                        <span class="chip bg-color">Ubuntu20.04</span>
+                    </a>
+                    
+                    <a href="/tags/CUDA/">
+                        <span class="chip bg-color">CUDA</span>
+                    </a>
+                    
+                    <a href="/tags/PYTORCH/">
+                        <span class="chip bg-color">PYTORCH</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -784,13 +954,13 @@ if __name__ == '__main__':
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/29/vscode-fen-bu-shi-xun-lian-diao-shi/">
+                <a href="/2022/10/20/win11-shen-du-xue-xi-huan-jing-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="vscode分布式训练调试">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Win11深度学习环境搭建">
                         
-                        <span class="card-title">vscode分布式训练调试</span>
+                        <span class="card-title">Win11深度学习环境搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -801,7 +971,7 @@ if __name__ == '__main__':
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-20
                             </span>
                         <span class="publish-author">
                             
@@ -818,16 +988,16 @@ if __name__ == '__main__':
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vscode/">
-                        <span class="chip bg-color">vscode</span>
+                    <a href="/tags/Win11/">
+                        <span class="chip bg-color">Win11</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%AD%E7%BB%83/">
-                        <span class="chip bg-color">分布式训练</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/%E8%B0%83%E8%AF%95/">
-                        <span class="chip bg-color">调试</span>
+                    <a href="/tags/deep-learning/">
+                        <span class="chip bg-color">deep learning</span>
                     </a>
                     
                 </div>
