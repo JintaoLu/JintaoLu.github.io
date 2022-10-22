@@ -23,7 +23,8 @@ categories: 深度学习
 ![](./在Win11的WSL2下使用PyCharm运行PyTorch/pycharm_interpreter3.png)
 ## 二、配置Terminal
 设置终端Terminal,将Shell path改为wsl.exe
-![](./在Win11的WSL2下使用PyCharm运行PyTorch/pycharm_interpreter4.png
+
+![](./在Win11的WSL2下使用PyCharm运行PyTorch/pycharm_interpreter4.png)
 ## 三、正常运行
 ![](./在Win11的WSL2下使用PyCharm运行PyTorch/pycharm_wsl_demo.png)
 ## 四、调试
