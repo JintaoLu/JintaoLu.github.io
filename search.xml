@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>在Win11的WSL2下使用PyCharm运行PyTorch</title>
+      <link href="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/"/>
+      <url>/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/</url>
+      
+        <content type="html"><![CDATA[<h1 id="在Win11的WSL2下使用PyCharm运行PyTorch"><a href="#在Win11的WSL2下使用PyCharm运行PyTorch" class="headerlink" title="在Win11的WSL2下使用PyCharm运行PyTorch"></a>在Win11的WSL2下使用PyCharm运行PyTorch</h1><h2 id="一、配置WSL解释器"><a href="#一、配置WSL解释器" class="headerlink" title="一、配置WSL解释器"></a>一、配置WSL解释器</h2><p>设置项目解释器<br><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_interpreter.png"><br>设置System Interpreter 或 WSL2里的虚拟环境（已存在或新建）<br><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_interpreter2.png"><br><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_interpreter2_1.png"><br>配置完成<br><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_interpreter3.png"></p><h2 id="二、配置Terminal"><a href="#二、配置Terminal" class="headerlink" title="二、配置Terminal"></a>二、配置Terminal</h2><p>设置终端Terminal,将Shell path改为wsl.exe<br>![](./在Win11的WSL2下使用PyCharm运行PyTorch/pycharm_interpreter4.png</p><h2 id="三、正常运行"><a href="#三、正常运行" class="headerlink" title="三、正常运行"></a>三、正常运行</h2><p><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_wsl_demo.png"></p><h2 id="四、调试"><a href="#四、调试" class="headerlink" title="四、调试"></a>四、调试</h2><p>会弹出防火墙信息弹窗，点允许即可<br><img src="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/pycharm_wsl_debug.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Win11 </tag>
+            
+            <tag> WSL2 </tag>
+            
+            <tag> PyCharm </tag>
+            
+            <tag> PyTorch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建</title>
       <link href="/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/"/>
       <url>/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/</url>
