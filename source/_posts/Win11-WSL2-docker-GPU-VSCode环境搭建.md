@@ -14,7 +14,7 @@ categories: 深度学习
 # Win11+WSL2+docker+GPU+VSCode环境搭建
 
 ## 一、WSL2安装
-参见：
+参见：[Win11+WSL2+Ubuntu20.04+CUDA+PYTORCH深度学习环境搭建](https://jintaolu.github.io/2022/10/20/win11-wsl2-cuda-pytorch-shen-du-xue-xi-huan-jing-da-jian/)
 
 ## 二、Docker Desktop安装
 官网地址：https://docs.docker.com/desktop/windows/wsl/#download
