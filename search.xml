@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>Win11+WSL2+docker+GPU+VSCode环境搭建</title>
+      <link href="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/"/>
+      <url>/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Win11-WSL2-docker-GPU-VSCode环境搭建"><a href="#Win11-WSL2-docker-GPU-VSCode环境搭建" class="headerlink" title="Win11+WSL2+docker+GPU+VSCode环境搭建"></a>Win11+WSL2+docker+GPU+VSCode环境搭建</h1><h2 id="一、WSL2安装"><a href="#一、WSL2安装" class="headerlink" title="一、WSL2安装"></a>一、WSL2安装</h2><p>参见：</p><h2 id="二、Docker-Desktop安装"><a href="#二、Docker-Desktop安装" class="headerlink" title="二、Docker Desktop安装"></a>二、Docker Desktop安装</h2><p>官网地址：<a href="https://docs.docker.com/desktop/windows/wsl/#download">https://docs.docker.com/desktop/windows/wsl/#download</a><br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker-install.png"><br>docker设置<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_setting1.png"><br>设置docker的wsl发行版<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_setting2.png"><br>设置国内源<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_setting3.png"><br>验证docker版本<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_version.png"><br>拉取docker镜像</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">docker pull nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_example.png"><br>打开浏览器，输入<code>http://localhost</code><br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_example_web.png"></p><h2 id="三、安装-NVIDIA-Container-Toolkit"><a href="#三、安装-NVIDIA-Container-Toolkit" class="headerlink" title="三、安装 NVIDIA Container Toolkit"></a>三、安装 NVIDIA Container Toolkit</h2><p>依次执行命令</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">distribution=$(. /etc/os-release;echo $ID$VERSION_ID)curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.listsudo apt-get updatesudo apt-get install -y nvidia-docker2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果出现以下问题<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/nvidia-error.png"><br>依次执行下面命令，建立软链接，注意修改对应版本</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo ln -sf /usr/local/cuda-11.3/lib64/libcudnn.so.8.6.0 /usr/local/cuda-11.3/lib64/libcudnn.so.8       sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_cnn_infer.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_cnn_infer.so.8sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_adv_infer.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_adv_infer.so.8sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_adv_train.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_adv_train.so.8sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_ops_train.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_ops_train.so.8sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_ops_infer.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_ops_infer.so.8sudo ln -sf /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_cnn_train.so.8.6.0 /usr/local/cuda-11.3/targets/x86_64-linux/lib/libcudnn_cnn_train.so.8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="四、Docker-PyTorch镜像"><a href="#四、Docker-PyTorch镜像" class="headerlink" title="四、Docker PyTorch镜像"></a>四、Docker PyTorch镜像</h2><p>拉取PyTorch的Docker镜像,进入容器，验证GPU是否可用</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">docker pull pytorch/pytorchdocker run --runtime=nvidia  -it --name torch pytorch/pytorch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/docker_torch.png"></p><h2 id="五、VSCode使用WLS"><a href="#五、VSCode使用WLS" class="headerlink" title="五、VSCode使用WLS"></a>五、VSCode使用WLS</h2><p>VSCode安装略过。VSCode的WSL和python插件安装<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/WSL_VSCode.png"><br>安装完后，在Remote Explore中的WSL Targets下会在WSL的显示<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/WSL_VSCode_Remote.png"><br>VSCode的WSL的python插件安装<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/vscode_wsl_python.png"><br>WSL下启动vscode, <code>code .</code><br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/vscode_start.png"><br>选择解释器后，运行结果<br><img src="/2022/10/25/win11-wsl2-docker-gpu-vscode-huan-jing-da-jian/vscode_demo.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Win11 </tag>
+            
+            <tag> WSL2 </tag>
+            
+            <tag> Docker </tag>
+            
+            <tag> GPU </tag>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在Win11的WSL2下使用PyCharm运行PyTorch</title>
       <link href="/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/"/>
       <url>/2022/10/21/zai-win11-de-wsl2-xia-shi-yong-pycharm-yun-xing-pytorch/</url>
