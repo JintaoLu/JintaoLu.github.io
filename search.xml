@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>WSL2访问Windows的网络硬盘</title>
+      <link href="/2023/03/30/wsl2-fang-wen-windows-de-wang-luo-ying-pan/"/>
+      <url>/2023/03/30/wsl2-fang-wen-windows-de-wang-luo-ying-pan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="WSL2访问Windows的网络硬盘"><a href="#WSL2访问Windows的网络硬盘" class="headerlink" title="WSL2访问Windows的网络硬盘"></a>WSL2访问Windows的网络硬盘</h1><h2 id="1、安装依赖"><a href="#1、安装依赖" class="headerlink" title="1、安装依赖"></a>1、安装依赖</h2><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo apt-get updatesudo apt-get install cifs-utils<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="2、创建挂载点："><a href="#2、创建挂载点：" class="headerlink" title="2、创建挂载点："></a>2、创建挂载点：</h2><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo mkdir /mnt/ysudo mount -t drvfs Y: /mnt/y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="3、-永久生效（启动后即生效）："><a href="#3、-永久生效（启动后即生效）：" class="headerlink" title="3、 永久生效（启动后即生效）："></a>3、 永久生效（启动后即生效）：</h2><p>sudo vi /etc/fstab添加新一行</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">Y: /mnt/y drvfs defaults 0 0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="4、查看挂载结果"><a href="#4、查看挂载结果" class="headerlink" title="4、查看挂载结果"></a>4、查看挂载结果</h2><p>至此挂载搞定，可像普通目录一样访问：</p><pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">ll /mnt/y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>参考：<br><a href="https://madgd.github.io/2021/05/20/wsL2%E4%B8%AD%E6%8C%82%E8%BD%BDwindows%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E7%A1%AC%E7%9B%98/">https://madgd.github.io/2021/05/20/wsL2中挂载windows下的网络硬盘/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WSL2 </tag>
+            
+            <tag> Windows </tag>
+            
+            <tag> 网络硬盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WSL2子系统Ubuntu安装位置迁移</title>
       <link href="/2022/10/27/wsl2-zi-xi-tong-ubuntu-an-zhuang-wei-zhi-qian-yi/"/>
       <url>/2022/10/27/wsl2-zi-xi-tong-ubuntu-an-zhuang-wei-zhi-qian-yi/</url>
@@ -49,9 +78,9 @@
       
         <tags>
             
-            <tag> Win11 </tag>
-            
             <tag> WSL2 </tag>
+            
+            <tag> Win11 </tag>
             
             <tag> Docker </tag>
             
@@ -82,9 +111,9 @@
       
         <tags>
             
-            <tag> Win11 </tag>
-            
             <tag> WSL2 </tag>
+            
+            <tag> Win11 </tag>
             
             <tag> PyCharm </tag>
             
@@ -113,9 +142,9 @@
       
         <tags>
             
-            <tag> Win11 </tag>
-            
             <tag> WSL2 </tag>
+            
+            <tag> Win11 </tag>
             
             <tag> 深度学习 </tag>
             
